@@ -1,0 +1,143 @@
+@import "../../utils/colors.scss";
+
+.disk {
+  margin-top: 20px;
+  &_btns {
+    display: flex;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+  }
+  &_action-block {
+    margin: 20px 20px 20px 0;
+    display: flex;
+    align-items: center;
+    button {
+      padding: 3px 5px;
+    }
+  }
+  &_back {
+    margin: 0 5px 0 0;
+  }
+  &_create {
+    margin: 0 5px;
+  }
+  &_upload-input {
+    display: none;
+  }
+  &_upload-label {
+    border: 2px dashed $font-color;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 0 5px;
+    white-space: pre;
+  }
+  &_view-block {
+    display: flex;
+    margin: 20px 0 20px 20px;
+    margin-left: auto;
+  }
+  &_select {
+    margin-left: auto;
+    padding: 3px 5px;
+  }
+  &_list,
+  &_plate {
+    height: 20px;
+    width: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: no-repeat center center;
+    background-size: contain;
+    margin: 0 10px;
+  }
+  &_list {
+    background-image: url("../../assets/img/list.svg");
+  }
+  &_plate {
+    background-image: url("../../assets/img/plates.svg");
+  }
+}
+
+.popup {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &_content {
+    width: 400px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &_create {
+    align-self: flex-end;
+  }
+
+  &_header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  input {
+    margin: 20px 0;
+  }
+}
+
+.drop-area {
+  width: 100%;
+  height: 100%;
+  border: dashed 2px $font-color;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  align-items: center;
+  font-size: 2em;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid $font-color;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: $font-color transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

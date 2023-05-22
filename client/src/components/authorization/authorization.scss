@@ -1,0 +1,33 @@
+@import "../../utils/colors.scss";
+
+.authorization {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 500px;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 30px;
+  // align-self: center;
+
+  input {
+    margin: 5px 20px;
+  }
+
+  .header {
+    font-size: 25px;
+    font-weight: 700;
+  }
+  .btn {
+    border: none;
+    background-color: $font-color;
+    border-radius: 8px;
+    color: white;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    align-self: flex-end;
+    font-size: 1.2em;
+    @include btn-transform;
+  }
+}

@@ -1,0 +1,13 @@
+$background-color: #e0dae7;
+$font-color: #31758a;
+$nav-logo-font-color: #1effff;
+$nav-background-color: #ff7a0e;
+$text-shadow: 1px 1px 1px rgb(20, 6, 37);
+
+@mixin btn-transform {
+  &:hover {
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+}

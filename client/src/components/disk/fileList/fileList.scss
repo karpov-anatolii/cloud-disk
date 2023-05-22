@@ -1,0 +1,60 @@
+.filelist {
+  width: 90vw;
+  margin: 20px 0;
+  &_header {
+    display: grid;
+    grid-template-columns: 0.5fr 4fr repeat(2, 1fr) 0.5fr;
+  }
+
+  &_name {
+    grid-column-start: 2;
+    justify-self: center;
+  }
+  &_date {
+    grid-column-start: 3;
+    justify-self: center;
+  }
+  &_size {
+    grid-column-start: 4;
+    justify-self: center;
+  }
+  &_set {
+    grid-column-start: 5;
+    justify-self: center;
+  }
+}
+
+.fileplate {
+  display: flex;
+  width: 90vw;
+  flex-wrap: wrap;
+  justify-content: start;
+  margin: 20px 0;
+}
+
+.file-enter-active {
+  animation: file-enter 500ms forwards;
+}
+
+@keyframes file-enter {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.files_not_found {
+  text-align: center;
+  margin: 100px 0;
+  width: 90vw;
+}
+
+@media screen and (max-width: 500px) {
+  .filelist_header {
+    grid-template-columns: 0.5fr 2fr repeat(2, 1fr) 0.5fr;
+  }
+}

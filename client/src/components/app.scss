@@ -1,0 +1,43 @@
+@import "./../utils/colors.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $background-color;
+}
+
+#root {
+  width: 100%;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 1140px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  padding: 20px;
+  color: $font-color;
+}
+
+.btn_del_avat {
+  padding: 3px 5px;
+  margin-right: 10px;
+  border-color: red;
+  border-radius: 5px;
+}

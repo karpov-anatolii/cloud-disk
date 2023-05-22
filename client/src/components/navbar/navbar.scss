@@ -1,0 +1,77 @@
+@import "../../utils/colors.scss";
+
+.navbar {
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // height: 50px;
+  background-color: $nav-background-color;
+  // color: $nav-font-color !important;
+  width: 100%;
+  padding: 10px;
+  color: $nav-logo-font-color;
+  text-shadow: $text-shadow;
+  border-bottom: 2px solid rgb(17, 60, 71);
+  .login {
+    margin-left: auto;
+    margin-right: 20px;
+  }
+  .search {
+    width: 200px;
+    margin: 15px;
+  }
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+}
+
+.container {
+  //width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .logo-block {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 67%;
+    .container2 {
+      white-space: pre;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .logo-icon {
+        transform: scale(1.8);
+        color: $nav-logo-font-color;
+        margin: 0 5px 0 10px;
+      }
+      .header {
+        margin-left: 10px;
+        font-size: 24px;
+        font-weight: 700;
+        text-decoration: none;
+        color: $nav-logo-font-color;
+      }
+    }
+  }
+  .auth-block {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-right: 10px;
+    margin-left: auto;
+
+    div {
+      cursor: pointer;
+      a {
+        color: $nav-logo-font-color;
+        text-decoration: none;
+      }
+    }
+  }
+}
